@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App" style={{backgroundColor: pastelColor}}>
       <QuoteBox pastelColor={pastelColor} setPastelColor={setPastelColor}/>
-      <p>By SlothSan!</p>
+      <p className={"created-text"}>By SlothSan!</p>
     </div>
   );
 }
