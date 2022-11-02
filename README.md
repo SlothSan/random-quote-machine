@@ -4,7 +4,7 @@ Created using React for the FreeCodeCamp Front End course.
 
 Uses this API to retrieve quotes : https://api-ninjas.com/api/quotes
 
-Uses the gh-pages npm package for deployment. 
+Uses the gh-pages npm package for deployment : https://www.npmjs.com/package/gh-pages
 
 
 
