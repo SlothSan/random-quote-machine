@@ -5,12 +5,16 @@ import QuoteAuthor from "./QuoteAuthor/QuoteAuthor";
 import NewQuote from "./NewQuote/NewQuote";
 import TweetQuote from "./TweetQuote/TweetQuote";
 
-const QuoteBox = () => {
+const QuoteBox = (props) => {
 
     const [quoteText, setQuoteText] = useState('');
     const [quoteAuthor, setQuoteAuthor] = useState('');
     const [getNewQuote, setGetNewQuote] =useState(false);
-    //TODO Implement the API call for quotes and set the state and pass down to components as needed.
+
+    const getRandomPastelColor = () => {
+        let hue = Math.floor(Math.random() * 360);
+        return 'hsl(' + hue + ', 100%, 80%)';
+    }
 
     const getQuoteFromApi = async () => {
         let url = 'https://api.api-ninjas.com/v1/quotes?category=learning'
@@ -27,20 +31,23 @@ const QuoteBox = () => {
     }
 
     useEffect(() => {
+        props.setPastelColor(getRandomPastelColor())
         getQuoteFromApi()
+
     }, [])
 
     useEffect(() => {
+        props.setPastelColor(getRandomPastelColor())
         getQuoteFromApi()
     }, [getNewQuote])
 
     return (
         <div id={"quote-box"} className={"quote-box"}>
-            <QuoteText quoteText={quoteText} />
-            <QuoteAuthor quoteAuthor={quoteAuthor} />
+            <QuoteText pastelColor={props.pastelColor} quoteText={quoteText} />
+            <QuoteAuthor pastelColor={props.pastelColor} quoteAuthor={quoteAuthor} />
             <div className={"button-container"}>
-                <TweetQuote quoteText={quoteText} quoteAuthor={quoteAuthor} />
-                <NewQuote getNewQuote={getNewQuote} setGetNewQuote={setGetNewQuote}/>
+                <TweetQuote  pastelColor={props.pastelColor} quoteText={quoteText} quoteAuthor={quoteAuthor} />
+                <NewQuote pastelColor={props.pastelColor} getNewQuote={getNewQuote} setGetNewQuote={setGetNewQuote}/>
             </div>
         </div>
     )

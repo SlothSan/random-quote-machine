@@ -1,15 +1,15 @@
 import './App.css';
 import QuoteBox from "./Components/QuoteBox/QuoteBox";
+import {useState} from "react";
 
 function App() {
 
-  const getRandomPastelColor = () => {
-      //TODO Implement this function need to setup state for this and pass to all components that need it.
-  }
+  const [pastelColor, setPastelColor] = useState('');
 
   return (
-    <div className="App">
-      <QuoteBox />
+    <div className="App" style={{backgroundColor: pastelColor}}>
+      <QuoteBox pastelColor={pastelColor} setPastelColor={setPastelColor}/>
+      <p>By SlothSan!</p>
     </div>
   );
 }

@@ -7,7 +7,9 @@ const TweetQuote = (props) => {
            className={"tweet-quote"}
            title={"Tweet this quote!"}
            target={"_blank"}
-           href={url}>
+           href={url}
+           style={{backgroundColor: props.pastelColor}}>
+
             <i className={"fa fa-twitter"}></i>
         </a>
     )

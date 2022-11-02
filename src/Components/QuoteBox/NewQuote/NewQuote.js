@@ -8,7 +8,9 @@ const NewQuote = (props) => {
     }
 
     return (
-        <a id={"new-quote"} className={"new-quote"} onClick={newQuoteOnClick} href={""}>
+        <a id={"new-quote"} className={"new-quote"}
+           onClick={newQuoteOnClick} href={""}
+           style={{backgroundColor: props.pastelColor}}>
             New Quote!
         </a>
     )
