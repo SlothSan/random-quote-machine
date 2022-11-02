@@ -1,3 +1,13 @@
+#Random-Quote-Machine
+
+Created using React for the FreeCodeCamp Front End course. 
+
+Uses this API to retrieve quotes : https://api-ninjas.com/api/quotes
+
+Uses the gh-pages npm package for deployment. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
