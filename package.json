@@ -1,8 +1,8 @@
 {
   "name": "random-quote-machine",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://SlothSan.github.io",
+  "private": false,
+  "homepage": "https://slothsan.github.io/random-quote-machine/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -37,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
