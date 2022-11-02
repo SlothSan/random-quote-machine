@@ -1,9 +1,9 @@
 import './QuoteText.css'
 
-const QuoteText = () => {
+const QuoteText = (props) => {
     return (
             <p id={"text"} className={"quote-text"}>
-
+                {props.quoteText}
             </p>
         )
 }
