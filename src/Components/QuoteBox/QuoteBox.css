@@ -1,0 +1,14 @@
+.quote-box {
+  width: 500px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=QuoteBox.css.map */
