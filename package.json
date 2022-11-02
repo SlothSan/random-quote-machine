@@ -2,7 +2,6 @@
   "name": "random-quote-machine",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://slothsan.github.io/random-quote-machine",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
