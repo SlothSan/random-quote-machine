@@ -2,11 +2,13 @@ import './QuoteBox.css'
 import {useEffect, useState} from "react";
 import QuoteText from "./QuoteText/QuoteText";
 import QuoteAuthor from "./QuoteAuthor/QuoteAuthor";
+import NewQuote from "./NewQuote/NewQuote";
 
 const QuoteBox = () => {
 
     const [quoteText, setQuoteText] = useState('');
     const [quoteAuthor, setQuoteAuthor] = useState('');
+    const [getNewQuote, setGetNewQuote] =useState(false);
     //TODO Implement the API call for quotes and set the state and pass down to components as needed.
 
     const getQuoteFromApi = async () => {
@@ -27,10 +29,15 @@ const QuoteBox = () => {
         getQuoteFromApi()
     }, [])
 
+    useEffect(() => {
+        getQuoteFromApi()
+    }, [getNewQuote])
+
     return (
         <div id={"quote-box"} className={"quote-box"}>
             <QuoteText quoteText={quoteText} />
             <QuoteAuthor quoteAuthor={quoteAuthor} />
+            <NewQuote getNewQuote={getNewQuote} setGetNewQuote={setGetNewQuote}/>
         </div>
     )
 }
