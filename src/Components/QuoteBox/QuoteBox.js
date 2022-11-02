@@ -13,11 +13,11 @@ const QuoteBox = (props) => {
 
     const getRandomPastelColor = () => {
         let hue = Math.floor(Math.random() * 360);
-        return 'hsl(' + hue + ', 100%, 80%)';
+        return 'hsl(' + hue + ', 50%, 50%)';
     }
 
     const getQuoteFromApi = async () => {
-        let url = 'https://api.api-ninjas.com/v1/quotes?category=learning'
+        let url = 'https://api.api-ninjas.com/v1/quotes?category=inspirational'
         let requestOptions = {
             method: 'GET',
             headers: {
