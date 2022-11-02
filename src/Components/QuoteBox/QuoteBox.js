@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import QuoteText from "./QuoteText/QuoteText";
 import QuoteAuthor from "./QuoteAuthor/QuoteAuthor";
 import NewQuote from "./NewQuote/NewQuote";
+import TweetQuote from "./TweetQuote/TweetQuote";
 
 const QuoteBox = () => {
 
@@ -37,7 +38,10 @@ const QuoteBox = () => {
         <div id={"quote-box"} className={"quote-box"}>
             <QuoteText quoteText={quoteText} />
             <QuoteAuthor quoteAuthor={quoteAuthor} />
-            <NewQuote getNewQuote={getNewQuote} setGetNewQuote={setGetNewQuote}/>
+            <div className={"button-container"}>
+                <TweetQuote quoteText={quoteText} quoteAuthor={quoteAuthor} />
+                <NewQuote getNewQuote={getNewQuote} setGetNewQuote={setGetNewQuote}/>
+            </div>
         </div>
     )
 }
