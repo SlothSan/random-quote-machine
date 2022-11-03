@@ -31,14 +31,12 @@ const QuoteBox = (props) => {
     }
 
     useEffect(() => {
-        props.setPastelColor(getRandomPastelColor())
-        getQuoteFromApi()
+        getQuoteFromApi().then(r => props.setPastelColor(getRandomPastelColor()))
 
     }, [])
 
     useEffect(() => {
-        props.setPastelColor(getRandomPastelColor())
-        getQuoteFromApi()
+        getQuoteFromApi().then(r => props.setPastelColor(getRandomPastelColor()))
     }, [getNewQuote])
 
     return (
